@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Container extends React.Component {
+class Board extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -32,10 +32,12 @@ class Game extends React.Component {
 
   render() {
     return(
-      <div>
-        <h1>Sudoku</h1>
-        <div>{this.state.answer.map(item => <div className='row'>{item}</div>)}</div>
-      </div> 
+      <main>
+        <div>
+          <h1>Sudoku</h1>
+          <div>{this.state.answer.map(item => <div className='row'>{item}</div>)}</div>
+        </div> 
+      </main>
     )
   }
 }
