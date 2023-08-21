@@ -1,14 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Game extends React.Component {
+class Container extends React.Component {
   constructor(props) {
     super(props)
   }
 
   render() {
+
+  }
+}
+
+class Game extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      answer: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    }
+  }
+
+  render() {
     return(
-      <h1>Sudoku</h1>
+      <div>
+        <h1>Sudoku</h1>
+        <div>{this.state.answer.map(item => <div className='number-box'>{item}</div>)}</div>
+      </div> 
     )
   }
 }
