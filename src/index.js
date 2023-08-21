@@ -15,6 +15,17 @@ class Game extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      beginning: [
+        ['', '', '', '', '', '1', '', '', ''],
+        ['', '', '', '', '', '', '1', '', ''],
+        ['', '1', '', '', '', '', '', '', ''],
+        ['', '', '', '', '', '3', '', '', ''],
+        ['', '', '', '', '', '', '', '', ''],
+        ['', '', '', '', '', '', '', '', ''],
+        ['', '', '', '', '', '', '', '', ''],
+        ['', '', '', '', '', '', '', '', ''],
+        ['', '', '', '', '', '', '', '', '']
+      ],
       answer: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     }
   }
@@ -23,7 +34,7 @@ class Game extends React.Component {
     return(
       <div>
         <h1>Sudoku</h1>
-        <div>{this.state.answer.map(item => <div className='number-box'>{item}</div>)}</div>
+        <div>{this.state.answer.map(item => <div className='row'>{item}</div>)}</div>
       </div> 
     )
   }
