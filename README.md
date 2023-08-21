@@ -19,3 +19,6 @@ Node.js
 Javascript
 Webpack
 Babel
+
+Working from the principle of Minimum Viable Product:
+ - a singular sudoku game that can be played interactively.
