@@ -1,6 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+class Square extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <div className='square'>
+        These are the squares
+      </div>
+    )
+  }
+}
+
 class Board extends React.Component {
   constructor(props) {
     super(props)
@@ -11,6 +25,7 @@ class Board extends React.Component {
       <div>
         <h1>
           This is the board
+          <Square />
         </h1>
       </div>
     ) 
