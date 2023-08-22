@@ -9,7 +9,7 @@ class Square extends React.Component {
   render() {
     return (
       <div className='square'>
-        These are the squares
+        <p>Here is a square: {this.props.content}</p>
       </div>
     )
   }
@@ -22,11 +22,9 @@ class Board extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>
-          This is the board
-          <Square />
-        </h1>
+      <div className='board'>
+        {this.props.board.map((item) => <Square content={item}/>)}
+          {<Square />}
       </div>
     ) 
   }
@@ -36,16 +34,16 @@ class Game extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      beginning: [
-        ['', '', '', '', '', '1', '', '', ''],
-        ['', '', '', '', '', '', '1', '', ''],
-        ['', '1', '', '', '', '', '', '', ''],
-        ['', '', '', '', '', '3', '', '', ''],
-        ['', '', '', '', '', '', '', '', ''],
-        ['', '', '', '', '', '', '', '', ''],
-        ['', '', '', '', '', '', '', '', ''],
-        ['', '', '', '', '', '', '', '', ''],
-        ['', '', '', '', '', '', '', '', '']
+      board: [
+        ' ', ' ', ' ', ' ', ' ', '1', ' ', ' ', ' ',
+        ' ', ' ', ' ', ' ', ' ', ' ', '1', ' ', ' ',
+        ' ', '1', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+        ' ', ' ', ' ', ' ', ' ', '3', ' ', ' ', ' ',
+        ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+        ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+        ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+        ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+        ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '
       ],
       answer: ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     }
@@ -57,8 +55,7 @@ class Game extends React.Component {
         <div>
           <h1>Sudoku</h1>
           <div>
-            <Board />
-            {/* {this.state.answer.map(item => <div className='row'>{item}</div>)} */}
+            <Board board={this.state.board} />
           </div>
         </div> 
       </main>
