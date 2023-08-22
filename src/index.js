@@ -7,7 +7,13 @@ class Board extends React.Component {
   }
 
   render() {
-
+    return (
+      <div>
+        <h1>
+          This is the board
+        </h1>
+      </div>
+    ) 
   }
 }
 
@@ -35,7 +41,10 @@ class Game extends React.Component {
       <main>
         <div>
           <h1>Sudoku</h1>
-          <div>{this.state.answer.map(item => <div className='row'>{item}</div>)}</div>
+          <div>
+            <Board />
+            {/* {this.state.answer.map(item => <div className='row'>{item}</div>)} */}
+          </div>
         </div> 
       </main>
     )
