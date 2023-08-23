@@ -9,9 +9,7 @@ class Square extends React.Component {
 
   render() {
     return (
-      <div className='square'>
-        <p>{this.props.content}</p>
-      </div>
+      <input className='square' placeholder={this.props.content} />
     )
   }
 }
