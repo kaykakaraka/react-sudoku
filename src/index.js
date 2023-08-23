@@ -137,6 +137,7 @@ class Game extends React.Component {
           content: '5',
           answer: '5'
         }
+      ]
     }
   }
 
