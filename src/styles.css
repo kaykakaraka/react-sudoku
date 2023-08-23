@@ -2,6 +2,16 @@
   color: blue;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  text-align: center;
+}
+
 .board {
   width: 450px;
   display: flex;

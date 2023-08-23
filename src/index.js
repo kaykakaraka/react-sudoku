@@ -9,7 +9,7 @@ class Square extends React.Component {
 
   render() {
     return (
-      <input className='square' placeholder={this.props.content} />
+      <input className='square' placeholder={this.props.content}/>
     )
   }
 }
@@ -51,7 +51,7 @@ class Game extends React.Component {
     return(
       <main>
         <div>
-          <h1>Sudoku</h1>
+          <h1 id='title'>Sudoku</h1>
           <div>
             <Board board={this.state.board} />
           </div>
