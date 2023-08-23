@@ -2,6 +2,10 @@
   color: blue;
 }
 
+body {
+  background-color: aliceblue;
+}
+
 main {
   display: flex;
   align-items: center;
