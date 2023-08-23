@@ -29,7 +29,7 @@ class Board extends React.Component {
   render() {
     return (
       <div className='board'>
-        {this.props.board.map((item) => <Square position={item.position} content={item.content}/>)}
+        {this.props.board.map((item) => <Square position={item.position} content={item.content} key={item.position}/>)}
         {console.log(this.props.board)}
       </div>
     ) 
