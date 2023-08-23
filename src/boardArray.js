@@ -104,8 +104,62 @@ const boardArray = [
   {
     position: 18,
     input: '',
+    content: '',
+    answer: '1'
+  },
+  {
+    position: 19,
+    input: '',
+    content: '1',
+    answer: '1'
+  },
+  {
+    position: 20,
+    input: '',
+    content: '',
+    answer: '8'
+  },
+  {
+    position: 21,
+    input: '',
     content: '5',
     answer: '5'
+  },
+  {
+    position: 22,
+    input: '',
+    content: '2',
+    answer: '2'
+  },
+  {
+    position: 23,
+    input: '',
+    content: '4',
+    answer: '4'
+  },
+  {
+    position: 24,
+    input: '',
+    content: '9',
+    answer: '9'
+  },
+  {
+    position: 25,
+    input: '',
+    content: '',
+    answer: '7'
+  },
+  {
+    position: 26,
+    input: '',
+    content: '',
+    answer: '3'
+  },
+  {
+    position: 27,
+    input: '',
+    content: '',
+    answer: '6'
   }
 ]
 
