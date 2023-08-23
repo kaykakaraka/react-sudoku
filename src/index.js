@@ -8,8 +8,14 @@ class Square extends React.Component {
   }
 
   render() {
+    let thickRightSquare = <input className='square thick-right-border' placeholder={this.props.content} />;
+    let normalSquare = <input className='square' placeholder={this.props.content}/>;
     return (
-      <input className='square' placeholder={this.props.content}/>
+      <div>
+        {
+          this.props.position % 3 == 0 ? thickRightSquare : normalSquare
+        }
+      </div>
     )
   }
 }
@@ -22,9 +28,8 @@ class Board extends React.Component {
   render() {
     return (
       <div className='board'>
-        {this.props.board.map((item) => <Square content={item.content}/>)}
+        {this.props.board.map((item) => <Square position={item.position} content={item.content}/>)}
         {console.log(this.props.board)}
-          {<Square />}
       </div>
     ) 
   }
@@ -66,7 +71,7 @@ class Game extends React.Component {
           answer: '5'
         },
         {
-          posiiton: 6,
+          position: 6,
           input: '',
           content: '',
           answer: '1'
@@ -133,6 +138,12 @@ class Game extends React.Component {
         },
         {
           position: 17,
+          input: '',
+          content: '5',
+          answer: '5'
+        },
+        {
+          position: 18,
           input: '',
           content: '5',
           answer: '5'
