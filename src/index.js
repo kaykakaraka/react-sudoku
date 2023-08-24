@@ -9,25 +9,14 @@ class Square extends React.Component {
   }
 
   render() {
-    console.log(this.props.content === this.props.answer)
-    let thickRightSquare = (
-      <input className='square thick-right-border' 
+    let square = (
+      <input className={`square ${this.props.psition % 3 == 0 ? 'thick-right border' : null}`} 
         placeholder={this.props.content} 
         disabled={ this.props.content == this.props.answer ? 'disabled' : null} 
       /> 
     );
-    let normalSquare = (
-      <input className='square' 
-        placeholder={this.props.content}
-        disabled={ this.props.content == this.props.answer ? 'disabled' : null} 
-      />
-    )
     return (
-      <div>
-        {
-          this.props.position % 3 == 0 ? thickRightSquare : normalSquare
-        }
-      </div>
+      <div>{square}</div>
     )
   }
 }
