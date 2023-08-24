@@ -160,7 +160,60 @@ const boardArray = [
     input: '',
     content: '',
     answer: '6'
+  },
+  {
+    position: 28,
+    input: '',
+    content: '',
+    answer: '5'
+  },
+  {
+    position: 29,
+    input: '',
+    content: '',
+    answer: '3'
+  },
+  {
+    position: 30,
+    input: '',
+    content: '',
+    answer: '1'
+  },
+  {
+    position: 31,
+    input: '',
+    content: '8',
+    answer: '8'
+  },
+  {
+    position: 32,
+    input: '',
+    content: '9',
+    answer: '9'
+  },
+  {
+    position: 33,
+    input: '',
+    content: '',
+    answer: '4'
+  },
+  {
+    position: 34,
+    input: '',
+    content: '6',
+    answer: '6'
+  },
+  {
+    position: 35,
+    input: '',
+    content: '',
+    answer: '2'
+  },
+  {
+    position: 36,
+    input: '',
+    content: '',
+    answer: '7'
   }
 ]
-
 export default boardArray;
