@@ -40,3 +40,7 @@ main {
 .thick-right-border {
   border-right: 3px solid black;
 }
+
+.thick-bottom {
+  border-bottom: 3px solid black;
+}

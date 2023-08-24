@@ -10,7 +10,9 @@ class Square extends React.Component {
 
   render() {
     let square = (
-      <input className={`square ${this.props.position % 3 == 0 ? 'thick-right-border' : null}`} 
+      <input className={
+        `square ${this.props.position % 3 == 0 ? 'thick-right-border' : null} ${this.props.position > 18 && this.props.position < 28 ? 'thick-bottom' : null}`
+      } 
         placeholder={this.props.content} 
         disabled={ this.props.content == this.props.answer ? 'disabled' : null} 
       /> 
