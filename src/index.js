@@ -3,33 +3,25 @@ import ReactDOM from 'react-dom';
 import './styles.css';
 import boardArray from './boardArray.js'
 
-class CompletedSquare extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-render() {
-  let thickRightSquare = <input className='square thick-right-border' placeholder={this.props.content} disabled='disabled'/>;
-  let normalSquare = <input className='square' placeholder={this.props.content} disabled='disabled'/>;
-  return (
-    <div>
-      {
-        this.props.position % 3 == 0 ? thickRightSquare : normalSquare
-      }
-    </div>
-   
-  )
-}
-
-}
 class Square extends React.Component {
   constructor(props) {
     super(props)
   }
 
   render() {
-    let thickRightSquare = <input className='square thick-right-border' placeholder={this.props.content} />;
-    let normalSquare = <input className='square' placeholder={this.props.content}/>;
+    console.log(this.props.content === this.props.answer)
+    let thickRightSquare = (
+      <input className='square thick-right-border' 
+        placeholder={this.props.content} 
+        disabled={ this.props.content == this.props.answer ? 'disabled' : null} 
+      /> 
+    );
+    let normalSquare = (
+      <input className='square' 
+        placeholder={this.props.content}
+        disabled={ this.props.content == this.props.answer ? 'disabled' : null} 
+      />
+    )
     return (
       <div>
         {
@@ -48,8 +40,7 @@ class Board extends React.Component {
   render() {
     return (
       <div className='board'>
-        {this.props.board.map((item) => item.content == item.answer ? <CompletedSquare position={item.position} content={item.content} key={item.position}/> : <Square position={item.position} content={item.content} key={item.position}/>)}
-        {console.log(this.props.board)}
+        {this.props.board.map((item) => <Square position={item.position} content={item.content} answer={item.answer} key={item.position}/>)}
       </div>
     ) 
   }
