@@ -8,14 +8,14 @@ class Square extends React.Component {
     super(props)
   }
 
-  needsThickBottom(position) {
-     return (position > 18 && position < 28)
+  needsThickBottom() {
+     return (this.props.position > 18 && this.props.position < 28)
   }
 
   render() {
     let square = (
       <input className={
-        `square ${this.props.position % 3 == 0 ? 'thick-right-border' : null} ${this.needsThickBottom(this.props.position) ? 'thick-bottom' : null}`
+        `square ${this.props.position % 3 == 0 ? 'thick-right-border' : null} ${this.needsThickBottom() ? 'thick-bottom' : null}`
       } 
         placeholder={this.props.content} 
         disabled={ this.props.content == this.props.answer ? 'disabled' : null} 
