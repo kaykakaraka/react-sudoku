@@ -17,12 +17,16 @@ class Square extends React.Component {
     return ( this.props.content == this.props.answer || this.props.input == this.props.answer )
   }
 
+  isIncorrect() {
+    return ( this.props.input && this.props.input != this.props.answer )
+  }
+
   render() {
     let square = (
       <input className={
         `square ${this.props.position % 3 == 0 ? 'thick-right-border' : null} 
         ${this.needsThickBottom() ? 'thick-bottom' : null}
-        ${this.props.input && this.props.input != this.props.answer ? 'incorrect' : null}`
+        ${ this.isIncorrect() ? 'incorrect' : null}`
 
       } 
         placeholder={this.props.content}
