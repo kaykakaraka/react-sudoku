@@ -1,7 +1,7 @@
 const boardArray = [
   {
     position: 1,
-    input: '3',
+    input: '',
     content: '3',
     answer: '3',
   },
