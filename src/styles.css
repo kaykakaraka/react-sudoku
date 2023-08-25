@@ -44,3 +44,7 @@ main {
 .thick-bottom {
   border-bottom: 3px solid black;
 }
+
+.incorrect {
+  color: red;
+}

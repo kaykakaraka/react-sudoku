@@ -16,9 +16,14 @@ class Square extends React.Component {
   render() {
     let square = (
       <input className={
-        `square ${this.props.position % 3 == 0 ? 'thick-right-border' : null} ${this.needsThickBottom() ? 'thick-bottom' : null}`
+        `square ${this.props.position % 3 == 0 ? 'thick-right-border' : null} 
+        ${this.needsThickBottom() ? 'thick-bottom' : null}
+        ${this.props.input && this.props.input != this.props.answer ? 'incorrect' : null}`
+
       } 
-        placeholder={this.props.content} 
+        placeholder={this.props.content}
+        value={this.props.input} 
+        onChange={(event) => this.props.handleChange(this.props.position, event)}
         disabled={ this.props.content == this.props.answer ? 'disabled' : null} 
       /> 
     );
@@ -33,10 +38,11 @@ class Board extends React.Component {
     super(props)
   }
 
+  
   render() {
     return (
       <div className='board'>
-        {this.props.board.map((item) => <Square position={item.position} content={item.content} answer={item.answer} key={item.position}/>)}
+        {this.props.board.map((item) => <Square position={item.position} input={item.input} content={item.content} answer={item.answer} key={item.position} handleChange={this.props.handleChange}/>)}
       </div>
     ) 
   }
@@ -48,6 +54,20 @@ class Game extends React.Component {
     this.state = {
       board: boardArray
     }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(position, event) {
+    event.persist()
+    this.setState({
+      board: this.state.board.map((item) => {
+        if (item.position == position) {
+          return {...item, input: event.target.value}
+        } else {
+          return item;
+        }
+      })
+    })
   }
 
   render() {
@@ -56,7 +76,7 @@ class Game extends React.Component {
         <div>
           <h1 id='title'>Sudoku</h1>
           <div>
-            <Board board={this.state.board} />
+            <Board board={this.state.board} handleChange={this.handleChange} />
           </div>
         </div> 
       </main>
