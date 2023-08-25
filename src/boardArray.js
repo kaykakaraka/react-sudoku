@@ -430,6 +430,60 @@ const boardArray = [
     input: '',
     content: '',
     answer: '9'
+  },
+  {
+    position: 73,
+    input: '',
+    content: '',
+    answer: '7'
+  },
+  {
+    position: 74,
+    input: '',
+    content: '',
+    answer: '5'
+  },
+  {
+    position: 75,
+    input: '',
+    content: '',
+    answer: '3'
+  },
+  {
+    position: 76,
+    input: '',
+    content: '9',
+    answer: '9'
+  },
+  {
+    position: 77,
+    input: '',
+    content: '',
+    answer: '1'
+  },
+  {
+    position: 78,
+    input: '',
+    content: '6',
+    answer: '6'
+  },
+  {
+    position: 79,
+    input: '',
+    content: '',
+    answer: '2'
+  },
+  {
+    position: 80,
+    input: '',
+    content: '4',
+    answer: '4'
+  },
+  {
+    position: 81,
+    input: '',
+    content: '',
+    answer: '8'
   }
 ]
 export default boardArray;
