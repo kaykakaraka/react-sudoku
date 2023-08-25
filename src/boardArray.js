@@ -323,5 +323,59 @@ const boardArray = [
     content: '',
     answer: '4'
   },
+  {
+    position: 55,
+    input: '',
+    content: '',
+    answer: '4'
+  },
+  {
+    position: 56,
+    input: '',
+    content: '',
+    answer: '9'
+  },
+  {
+    position: 57,
+    input: '',
+    content: '',
+    answer: '6'
+  },
+  {
+    position: 58,
+    input: '',
+    content: '3',
+    answer: '3'
+  },
+  {
+    position: 59,
+    input: '',
+    content: '',
+    answer: '8'
+  },
+  {
+    position: 60,
+    input: '',
+    content: '2',
+    answer: '2'
+  },
+  {
+    position: 61,
+    input: '',
+    content: '',
+    answer: '1'
+  }, 
+  {
+    position: 62,
+    input: '',
+    content: '',
+    answer: '7'
+  }, 
+  {
+    position: 63,
+    input: '',
+    content: '',
+    answer: '5'
+  }, 
 ]
 export default boardArray;
