@@ -24,7 +24,7 @@ class Square extends React.Component {
         placeholder={this.props.content}
         value={this.props.input} 
         onChange={(event) => this.props.handleChange(this.props.position, event)}
-        disabled={ this.props.content == this.props.answer ? 'disabled' : null} 
+        disabled={ this.props.content == this.props.answer || this.props.input == this.props.answer ? 'disabled' : null} 
       /> 
     );
     return (
