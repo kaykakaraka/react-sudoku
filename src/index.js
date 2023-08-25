@@ -9,7 +9,8 @@ class Square extends React.Component {
   }
 
   needsThickBottom() {
-     return (this.props.position > 18 && this.props.position < 28)
+    const p = this.props.position
+    return ((p > 18 && p < 28) || (p > 45 && p < 55))
   }
 
   render() {
