@@ -21,8 +21,8 @@ class Square extends React.Component {
     return ( this.props.input && this.props.input != this.props.answer )
   }
 
-  render() {
-    let square = (
+  createSquare() {
+    return ( 
       <input className={
         `square ${this.props.position % 3 == 0 ? 'thick-right-border' : null} 
         ${this.needsThickBottom() ? 'thick-bottom' : null}
@@ -35,6 +35,10 @@ class Square extends React.Component {
         disabled={ this.shouldBeDisabled() ? 'disabled' : null} 
       /> 
     );
+  }
+
+  render() {
+    let square = this.createSquare()
     return (
       <div>{square}</div>
     )
