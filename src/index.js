@@ -13,6 +13,10 @@ class Square extends React.Component {
     return ((p > 18 && p < 28) || (p > 45 && p < 55))
   }
 
+  shouldBeDisabled() {
+    return ( this.props.content == this.props.answer || this.props.input == this.props.answer )
+  }
+
   render() {
     let square = (
       <input className={
@@ -24,7 +28,7 @@ class Square extends React.Component {
         placeholder={this.props.content}
         value={this.props.input} 
         onChange={(event) => this.props.handleChange(this.props.position, event)}
-        disabled={ this.props.content == this.props.answer || this.props.input == this.props.answer ? 'disabled' : null} 
+        disabled={ this.shouldBeDisabled() ? 'disabled' : null} 
       /> 
     );
     return (
