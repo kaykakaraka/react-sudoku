@@ -8,6 +8,14 @@ class Square extends React.Component {
     super(props)
   }
 
+  giveClassName() {
+    let className = 'square '
+    this.props.position % 3 == 0 ? className += 'thick-right-border' : null;
+    this.needsThickBottom() ? className += ' thick-bottom' : null;
+    this.isIncorrect() ? className += ' incorrect' : null;
+    return className;
+  }
+
   needsThickBottom() {
     const p = this.props.position
     return ((p > 18 && p < 28) || (p > 45 && p < 55))
@@ -23,12 +31,7 @@ class Square extends React.Component {
 
   createSquare() {
     return ( 
-      <input className={
-        `square ${this.props.position % 3 == 0 ? 'thick-right-border' : null} 
-        ${this.needsThickBottom() ? 'thick-bottom' : null}
-        ${ this.isIncorrect() ? 'incorrect' : null}`
-
-      } 
+      <input className={this.giveClassName()} 
         placeholder={this.props.content}
         value={this.props.input} 
         onChange={(event) => this.props.handleChange(this.props.position, event)}
